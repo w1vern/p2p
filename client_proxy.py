@@ -53,7 +53,7 @@ async def punch_peer() -> None:
     if peer_addr is None:
         return
     loop = asyncio.get_running_loop()
-    for _ in range(6):
+    for _ in range(60):
         try:
             await loop.sock_sendto(udp_sock, b"ping", peer_addr)
         except Exception:
