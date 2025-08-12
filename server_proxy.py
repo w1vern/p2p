@@ -14,10 +14,12 @@ load_dotenv()
 
 SIGNALING_HOST: str = os.environ["SIGNALING_HOST"]
 SIGNALING_PORT: str = os.environ["SIGNALING_PORT"]
-SIGNALING_SERVER = f"ws://{SIGNALING_HOST}:{SIGNALING_PORT}"
+SIGNALING_SERVER = f"{SIGNALING_HOST}:{SIGNALING_PORT}"
+print(SIGNALING_SERVER)
 LOCAL_SERVER_HOST: str = os.environ["LOCAL_SERVER_HOST"]
 LOCAL_SERVER_PORT: int = int(os.environ["LOCAL_SERVER_PORT"])
-LOCAL_TARGET = f"http://{LOCAL_SERVER_HOST}:{LOCAL_SERVER_PORT}"
+LOCAL_TARGET = f"{LOCAL_SERVER_HOST}:{LOCAL_SERVER_PORT}"
+print(LOCAL_TARGET)
 
 udp_sock: socket.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 udp_sock.bind(("", 0))

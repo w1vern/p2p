@@ -8,8 +8,9 @@ from utils import data_to_str
 
 load_dotenv()
 
-HOST: str = os.getenv("SIGNALING_HOST", "0.0.0.0")
-PORT: int = int(os.getenv("SIGNALING_PORT", "0"))
+HOST: str = os.environ["SIGNALING_HOST"]
+PORT: int = int(os.environ["SIGNALING_PORT"])
+print(f"Listening on {HOST}:{PORT}")
 
 clients: dict[str, ServerConnection] = {}
 
