@@ -1,0 +1,20 @@
+[project]
+name = "p2p"
+version = "0.1.0"
+requires-python = ">=3.13"
+authors = [{ name = "w1vern", email = "bndvvl@gmail.com" }]
+license = "MIT"
+dependencies = [
+    "aiohttp>=3.12.15",
+    "dotenv>=0.9.9",
+    "websockets>=15.0.1",
+]
+
+[dependency-groups]
+dev = [
+    "cli-tools",
+    "isort>=6.0.1",
+]
+
+[tool.uv.sources]
+cli-tools = { git = "https://github.com/w1vern/cli_tools" }
